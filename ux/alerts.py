@@ -60,14 +60,16 @@ def load_success_alert():
 def clear_success_alert():
     alert = tk.Toplevel()
     
-    #TODO: create alert
+    #TODO: create alert and center it
+    
     alert_label = tk.Label(alert, text="Chat cleared successfully.", bg="#d4edda", fg="#155724", font=("Helvetica", 12))
     alert_label.pack(expand=True)
 
 #TODO: Create alert for no history found
 def no_history_alert():
     alert = tk.Toplevel()
-    #TODO: create alert
+    
+    #TODO: create alert and center it
     
     alert_label = tk.Label(alert, text="No chat history found.", bg="#f8d7da", fg="#ff0019", font=("Helvetica", 12))
     alert_label.pack(expand=True)
