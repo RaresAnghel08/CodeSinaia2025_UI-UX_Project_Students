@@ -59,6 +59,7 @@ def open_app():
         
     #TODO: insert the code here
     
+    
     # Chat log (Text widget)
     chat_log = Text(root, bg="#C5C5C5", bd=0, state=tk.DISABLED, wrap="word")
     chat_log.place(x=30.0, y=73.0, width=740.0, height=361.0)
