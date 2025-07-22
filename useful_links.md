@@ -6,4 +6,4 @@ Tkinter Designer este un tool care convertește design-uri din Figma în cod Pyt
 
 # Figma design
 
-[Design Figma](https://www.figma.com/design/cuNtrpjCHpGHbauYEfwbeJ/CodeSinaia_UI_Students?node-id=0-1&t=mcJ6qFdLuzdR6EcY-1)
+[Design Figma](https://www.figma.com/design/cuNtrpjCHpGHbauYEfwbeJ/CodeSinaia_UI_Students)
