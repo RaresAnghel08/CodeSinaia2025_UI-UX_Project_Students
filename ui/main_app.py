@@ -28,15 +28,13 @@ def open_app():
     
     root = tk.Tk()
     
-    #TODO
-    # #upper left image logo
-    root.iconbitmap(relative_to_assets('code_sinaia_logo.ico'))  # Ensure you have a code_sinaia_logo.ico file in the same directory
-    # root.tk.call('wm', 'iconphoto', root._w, tk.PhotoImage(file=os.path.join(ASSETS_PATH, "code_sinaia_logo.png")))
+    #TODO: de ce nu merge
+    # upper left image logo
+    root.iconbitmap('code_sinaia_logo.ico')  # Ensure you have a code_sinaia_logo.ico file in the same directory
     
     window_width = 800
     window_height = 600
     
-    #TODO: set window size and position
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     display_x = (screen_width // 2) - (window_width // 2)
@@ -60,13 +58,7 @@ def open_app():
     entry = Entry(root, bd=0)
     entry.place(x=30.0, y=465.0, width=740.0, height=40.0)
     entry.configure(bg="#C5C5C5", font=("Inter", 14 * -1), highlightthickness=0, relief="flat")
-
-    # Footer bar
-    canvas.create_rectangle(-4.0, 566.0, 800.0, 570.0, fill="#C5C5C5", outline="")
-    canvas.create_text(323.0, 576.0, anchor="nw", text="™CodeSinaia 2025", fill="#000000", font=("Inter", 14 * -1))
-    canvas.create_text(30.0, 575.0, anchor="nw", text="©2025 Inproted", fill="#000000", font=("Inter", 14 * -1))
-    canvas.create_text(260.0, 17.0, anchor="nw", text="MY CHATBOT APP", fill="#000000", font=("Inter", 32 * -1))
-
+    
     # Buttons
     def on_send():
         send_message(entry, chat_log)
@@ -76,44 +68,7 @@ def open_app():
         load_chat(chat_log)
     def on_save():
         save_chat(chat_log)
-
-    # Send button
-    button_image_send = PhotoImage(file=relative_to_assets("button_send.png"))
-    button_send = Button(image=button_image_send, borderwidth=0, highlightthickness=0, command=on_send,
-                        relief="flat", bg="#D9D9D9", activebackground="#D9D9D9")
-    button_send.place(x=30.0, y=516.0, width=130.0, height=40.0)
-
-    # Clear button
-    button_image_clear = PhotoImage(file=relative_to_assets("button_clear.png"))
-    button_clear = Button(image=button_image_clear, borderwidth=0, highlightthickness=0, command=on_clear,
-                        relief="flat", bg="#D9D9D9", activebackground="#D9D9D9")
-    button_clear.place(x=233.0, y=515.0, width=130.0, height=40.0)
-
-    # Load button
-    button_image_load = PhotoImage(file=relative_to_assets("button_load.png"))
-    button_load = Button(image=button_image_load, borderwidth=0, highlightthickness=0, command=on_load,
-                        relief="flat", bg="#D9D9D9", activebackground="#D9D9D9")
-    button_load.place(x=436.0, y=516.0, width=130.0, height=40.0)
-
-    # Save button
-    button_image_save = PhotoImage(file=relative_to_assets("button_save.png"))
-    button_save = Button(image=button_image_save, borderwidth=0, highlightthickness=0, command=on_save,
-                        relief="flat", bg="#D9D9D9", activebackground="#D9D9D9")
-    button_save.place(x=640.0, y=516.0, width=130.0, height=40.0)
-
-    # GitHub button
-    button_image_github = PhotoImage(file=relative_to_assets("button_github.png"))
-    button_github = Button(
-        image=button_image_github,
-        borderwidth=0,
-        highlightthickness=0,
-        command=lambda: webbrowser.open("https://github.com/RaresAnghel08/CodeSinaia2025_UI-UX_Project"),
-        relief="flat",
-        bg="#D9D9D9",
-        activebackground="#D9D9D9"
-    )
-    button_github.place(x=709.0, y=570.0, width=61.0, height=26.0)
-
+        
     root.bind('<Return>', lambda event=None: on_send()) # Send message on Enter key press
     root.resizable(False, False)
     root.mainloop()
