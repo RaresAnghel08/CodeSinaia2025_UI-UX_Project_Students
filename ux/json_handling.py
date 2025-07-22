@@ -14,12 +14,12 @@ def load_chat(chat_log):
             load_success_alert()
         chat_log.config(state=tk.NORMAL)
         chat_log.delete("1.0", tk.END)
-        
-        #TODO: insert messages into chat log
+
         for msg in messages:
             chat_log.insert(tk.END, f"{msg['sender']}: {msg['text']}\n")
             
         chat_log.config(state=tk.DISABLED)
+        
     except json.JSONDecodeError:
         json_decode_error_alert()
         chat_log.config(state=tk.DISABLED)
