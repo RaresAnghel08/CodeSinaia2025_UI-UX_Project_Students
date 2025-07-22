@@ -16,9 +16,9 @@ def load_chat(chat_log):
         chat_log.delete("1.0", tk.END)
 
         for msg in messages:
-            #TODO: Insert sender and text from msg with string interpolation
-            chat_log.insert(tk.END)
-            
+            #TODO: remind what means string interpolation and use it here
+            chat_log.insert(tk.END, "{msg['text']}: {msg['sender']}\n")
+
         chat_log.config(state=tk.DISABLED)
         
     except json.JSONDecodeError:
@@ -26,6 +26,7 @@ def load_chat(chat_log):
         chat_log.config(state=tk.DISABLED)
 
 def save_chat(chat_log):
+    
     lines = chat_log.get("1.0", tk.END).strip().split("\n")
     messages = []
     for line in lines:
