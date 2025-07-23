@@ -67,27 +67,23 @@ The main data objects used in the app include:
   - `probability`: Confidence/probability score (float)
   - `intent`: The detected intent/category (string)
 
-- **Theme Object:**
-  - `primary_color`: Main color used in the app
-  - `secondary_color`: Accent color
-  - `font_family`: Default font
-  - `font_size`: Default font size
-
 ### Project Structure
 
 - `app/`
   - `main.py` — Entry point, launches the app
-  - `ui/`
-    - `splash_screen.py` — Splash screen logic
-    - `main_app.py` — Main window and navigation
-  - `chatbot/`
-    - `messages.py` — Message handling logic
-    - `probability.py` — Response probability logic
-    - `responses.py` — Predefined responses and intent mapping
-  - `assets/`
-    - Images, icons, and Figma exports
-  - `themes/`
-    - Color and style definitions
+- `ui/`
+  - `splash_screen.py` — Splash screen logic
+  - `main_app.py` — Main window and navigation
+- `chatbot/`
+  - `messages.py` — Message handling logic
+  - `probability.py` — Response probability logic
+  - `responses.py` — Predefined responses and intent mapping
+- `assets/`
+  - Images, icons, and Figma exports
+- `ux/`
+  - `alerts.py` — Alert and error handling
+  - `json_handling.py` — JSON data management
+  - `messages.py` — User message handling
 
 ## References
 
