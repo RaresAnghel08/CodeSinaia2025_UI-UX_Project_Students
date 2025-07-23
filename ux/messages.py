@@ -9,10 +9,11 @@ def send_message(entry, chat_log):
 
     user_message = None
     
-    #TODO: get entry's text in the user_message variable 
+    #TODO: get entry's text in the user_message variable using the get method4
+    
     
     #TODO: if user_message is blank, empty_message_alert
-
+    
 
     chat_log.config(state=tk.NORMAL)
     chat_log.insert(tk.END, f"You: {user_message.strip()}\n")
