@@ -18,8 +18,9 @@ def send_message(entry, chat_log):
     chat_log.config(state=tk.NORMAL)
     chat_log.insert(tk.END, f"You: {user_message.strip()}\n")
     
-    #TODO: get response for the user message as the bot_response
     bot_response = None
+    #TODO: get response for the user message as the bot_response using the get_response function from chatbot.probability
+    
     
     chat_log.insert(tk.END, f"Bot: {bot_response}\n\n")
     
