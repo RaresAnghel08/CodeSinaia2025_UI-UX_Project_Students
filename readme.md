@@ -2,7 +2,7 @@ UI & UX Implementation with Figma & Tkinter
 ===========================================
 
 This project implements a modern UI/UX demo for Code Sinaia 2025, showcasing the integration of Figma design concepts with a Python Tkinter desktop application.  
-The working version of the project is available under the [final-version](https://github.com/RaresAnghel08/CodeSinaia2025_UI-UX_Project/) branch.  
+The working version of the project is available under the [final-version](https://github.com/inproted/CodeSinaia-2025) branch.  
 The main branch contains the core components and structure, while feature branches may contain additional or experimental functionality.
 
 ## Project Scope
